@@ -1724,7 +1724,8 @@ body {
     display: none;
   }
   .slide-inner .header-text p {
-    display: none;
+    /* display: none; */
+    visibility: visible;
   }
   .slide-inner .header-text {
     text-align: center;
