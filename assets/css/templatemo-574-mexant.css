@@ -1725,7 +1725,7 @@ body {
   }
   .slide-inner .header-text p {
     /* display: none; */
-    visibility: visible;
+    /* visibility: visible; */
   }
   .slide-inner .header-text {
     text-align: center;
