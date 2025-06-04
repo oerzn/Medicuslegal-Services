@@ -809,6 +809,9 @@ section.services {
   padding: 40px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   margin-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .services .service-item:hover i {
@@ -827,7 +830,8 @@ section.services {
   font-size: 64px;
   color: #43ba7f;
   margin-bottom: 30px;
-  margin-right: 30px;
+  margin-right: 30px;  
+
 }
 
 
