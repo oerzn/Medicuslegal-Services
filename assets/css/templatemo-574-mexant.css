@@ -834,7 +834,25 @@ section.services {
 
 }
 
-
+@media (max-width: 767px) {
+  .services .service-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0;
+    padding: 30px 20px;
+  }
+  .services .service-item i {
+    margin: 0 0 20px 0;
+    float: none;
+  }
+  .services .service-item h4 {
+    margin-bottom: 15px;
+  }
+  .services .service-item p {
+    margin-bottom: 0;
+  }
+}
 
 /*
 ---------------------------------------------
