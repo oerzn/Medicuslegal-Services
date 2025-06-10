@@ -1653,12 +1653,13 @@ body {
 
 @media (max-width: 992px) {
   .header-area .main-nav .nav li:last-child {
-    display: none;
+    display: inline-block;
   }
   .header-area .main-nav .nav li ul li:last-child {
     display: inline-block;
   }
   .header-area {
+    /* background-color: #919fdf; */
     background-color: #212741;
   }
   .slide-inner .header-text {
@@ -1785,5 +1786,50 @@ body {
   }
   .testimonials .item {
     padding: 50px;
+  }
+}
+
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map, .office-hours {
+  flex: 1 1 100%;
+}
+
+.office-hours h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.office-hours ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.office-hours li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.office-hours .closed {
+  color: #e53935;
+  font-weight: bold;
+}
+
+/* Responsive: side by side on larger screens */
+@media (min-width: 768px) {
+  .map, .office-hours {
+    flex: 1 1 48%;
   }
 }
