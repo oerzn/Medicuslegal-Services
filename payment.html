@@ -105,33 +105,36 @@ https://templatemo.com/tm-574-mexant
           <div class="card-body p-4">
             <h3 class="mb-4" style="color: #0eaf9c; font-weight: 700;">Bank Details</h3>
             <ul class="list-unstyled">
-              <li class="mb-3 d-flex align-items-center">
-                <span style="min-width: 140px; font-weight: 600;">Name:</span>
-                <span id="bank-name" class="me-2">MEDICUSLEGAL SERVICES PRIVATE LIMITED</span>
-                <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('bank-name')">Copy</button>
-              </li>
 
-              <li class="mb-3 d-flex align-items-center">
-                <span style="min-width: 140px; font-weight: 600;">Account No:</span>
-                <span id="account-no" class="me-2">44388266462</span>
-                <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('account-no')">Copy</button>
-              </li>
+  <li class="mb-4 d-flex align-items-center">
+    <span style="min-width: 140px; font-weight: 600;">Name:</span>
+    <span id="bank-name" class="me-2">MEDICUSLEGAL SERVICES PRIVATE LIMITED</span>
+    <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('bank-name')">Copy</button>
+  </li>
 
-              <li class="mb-3 d-flex align-items-center">
-                <span style="min-width: 140px; font-weight: 600;">IFSC Code:</span>
-                <span id="ifsc-code" class="me-2">SBIN0011215</span>
-                <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('ifsc-code')">Copy</button>
-              </li>
+  <li class="mb-4 d-flex align-items-center">
+    <span style="min-width: 140px; font-weight: 600;">Account No:</span>
+    <span id="account-no" class="me-2">44388266462</span>
+    <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('account-no')">Copy</button>
+  </li>
 
-              <li class="mb-3 d-flex align-items-center">
-                <span style="min-width: 140px; font-weight: 600;">Branch:</span>
-                <span id="branch" class="me-2">SBI LDA Colony, Lucknow</span>
-              </li>
-              <li class="mb-3 d-flex align-items-center">
+  <li class="mb-4 d-flex align-items-center">
+    <span style="min-width: 140px; font-weight: 600;">IFSC Code:</span>
+    <span id="ifsc-code" class="me-2">SBIN0011215</span>
+    <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('ifsc-code')">Copy</button>
+  </li>
+
+  <li class="mb-4 d-flex align-items-center">
+    <span style="min-width: 140px; font-weight: 600;">Branch:</span>
+    <span id="branch" class="me-2">SBI LDA Colony, Lucknow</span>
+    <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('branch')">Copy</button>
+  </li>
+
+              <li class="mb-4 d-flex align-items-center">
                 <span style="min-width: 140px; font-weight: 600;">UPI ID:</span>
                 <span id="upi-id" class="me-2">8299869572@okbizaxis</span>
                 <button class="btn btn-outline-secondary btn-sm" onclick="copyToClipboard('upi-id')">Copy</button>
-              </li>
+                </li>
             </ul>
           </div>
         </div>
@@ -156,13 +159,29 @@ https://templatemo.com/tm-574-mexant
     </div>
   </div>
 </section>
+<!-- Copied Alert (hidden by default) -->
+<div id="copied-alert" class="alert alert-success text-center fw-bold d-none" 
+     style="position: fixed; top: 20px; left: 50%; transform: translateX(-50%); 
+            z-index: 1050; width: auto; padding: 8px 20px; border-radius: 6px;">
+  Copied!
+</div>
 
 <script>
 function copyToClipboard(elementId) {
   var text = document.getElementById(elementId).innerText;
-  navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(text).then(function() {
+    let alertBox = document.getElementById("copied-alert");
+    alertBox.classList.remove("d-none");
+
+    // hide after 2 seconds
+    setTimeout(() => {
+      alertBox.classList.add("d-none");
+    }, 2000);
+  });
 }
 </script>
+
+
 
   
 
